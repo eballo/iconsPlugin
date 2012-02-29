@@ -1,0 +1,143 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: iconsPlugin 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-10 23:45+0100\n"
+"PO-Revision-Date: 2012-02-10 23:53+0100\n"
+"Last-Translator: eballo <enric.ballo@gmail.com>\n"
+"Language-Team:  <enric.ballo@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: iconsPlugin.php:79
+msgid "Attachment File Icons"
+msgstr "Afegir una icona"
+
+#: iconsPlugin.php:80
+msgid "Icons Plugin"
+msgstr "Signes convencionals"
+
+#: iconsPlugin.php:88
+msgid "Attachment File Icons Overview"
+msgstr "Llistat de icones"
+
+#: iconsPlugin.php:89
+msgid "Manage"
+msgstr "Gestionar"
+
+#: iconsPlugin.php:92
+msgid "Add Attachment Icons"
+msgstr "Afegir icona"
+
+#: iconsPlugin.php:93
+msgid "Add Icons"
+msgstr "Afegir icona"
+
+#: iconsPlugin.php:124
+msgid "Icons Overview - Available Icons"
+msgstr "Llistat d'Icones - Icones disponibles"
+
+#: iconsPlugin.php:167
+#: iconsPlugin.php:286
+msgid "NOTE:"
+msgstr "NOTA:"
+
+#: iconsPlugin.php:167
+#: iconsPlugin.php:286
+msgid "Refer help for instructions to use Icons Plugin."
+msgstr "Mirar l'ajuda per instruccions d'us"
+
+#: iconsPlugin.php:173
+#: iconsPlugin.php:178
+msgid "File Extension"
+msgstr "Descripció"
+
+#: iconsPlugin.php:173
+#: iconsPlugin.php:178
+msgid "Icon Available"
+msgstr "Icona Disponible"
+
+#: iconsPlugin.php:173
+#: iconsPlugin.php:178
+msgid "Action"
+msgstr "Acció"
+
+#: iconsPlugin.php:189
+msgid "Delete"
+msgstr "Suprimeix"
+
+#: iconsPlugin.php:204
+msgid "Delete Icon?"
+msgstr "Suprimir icona ?"
+
+#: iconsPlugin.php:208
+msgid "OK"
+msgstr "D'acord"
+
+#: iconsPlugin.php:210
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+#: iconsPlugin.php:242
+msgid "Icons Plugin - Add Icons"
+msgstr "Signes Convencionals - Afegir Icona"
+
+#: iconsPlugin.php:252
+msgid "<p>No icon file uploaded.</p>"
+msgstr "<p>No s'ha pujat cap icona.</p>"
+
+#: iconsPlugin.php:258
+msgid "Successfully added icon."
+msgstr "Icona afegida correctament"
+
+#: iconsPlugin.php:274
+msgid "remove"
+msgstr "Esborrar"
+
+#: iconsPlugin.php:275
+msgid "File type not allowed"
+msgstr "Tipus de fitxer no suportat"
+
+#: iconsPlugin.php:299
+msgid "Upload Attachment File Icon"
+msgstr "Pujada de fitxer"
+
+#: iconsPlugin.php:302
+msgid "Allowed format: png <br/> Allowed dimension: 16 X 16 px"
+msgstr "Format permés: png <br/> amb les dimensions: 16 X 16 px"
+
+#: iconsPlugin.php:307
+msgid "Upload Icon"
+msgstr "Pujada d'icona"
+
+#: iconsPlugin.php:336
+msgid "<p>Icon file does not meet the specified dimension.</p>"
+msgstr "<p>La icona no te la dimensió especificada.</p>"
+
+#: iconsPlugin.php:346
+msgid "<p>Unable to write to directory "
+msgstr "<p>No es pot escriure al directori"
+
+#: iconsPlugin.php:346
+msgid "/icons/ Is this directory writable by the server?</p>"
+msgstr "/icons/ es pot escriure al servidor ?</p>"
+
+#: iconsPlugin.php:352
+msgid "<p>Error, the file could not moved to : "
+msgstr "<p>Error, el fitxer no s'ha pogut moure a: "
+
+#: iconsPlugin.php:357
+msgid "<p>Error, the file permissions could not set</p>"
+msgstr "<p>Error, no tens permisos per escriure </p>"
+
+#: iconsPlugin.php:362
+msgid "<p>Error uploading file(Missing 'temp' folder).</p>"
+msgstr "<p>Error pujant el fitxer (No s'ha trobat el directori temporal).</p>"
+
+#~ msgid "Extension of File"
+#~ msgstr "Extensió del fitxer"

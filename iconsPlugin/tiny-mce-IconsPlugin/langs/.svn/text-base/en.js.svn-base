@@ -1,0 +1,8 @@
+tinyMCE.addI18n(
+{
+	en:{
+		ILCThickbox:{
+			desc : 'Add Thickbox to this image (Alt+Ctrl+X)'
+		}
+	}
+});
