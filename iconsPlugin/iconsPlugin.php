@@ -3,7 +3,7 @@
 	Plugin Name: Icons Plugin
 	Plugin URI: 
     Description: A plugin to display a list of icons into pages/posts. Feature to upload icons provided.
-    Version: 1.0
+    Version: 2.0
     Author: eballo
     Author URI: 
 	License: GPL
@@ -59,9 +59,11 @@ if (!class_exists("IconsPlugin"))
 	 * - Constructor 
 	 * - Constructor for PHP4
 	 * - Admin Menu function
-	 * - 
-	 * icons_plugin_install
-	 * icons_plugin_uninstall
+	 * - icons_list
+	 * - icons_add
+	 * - upload_icons
+	 * - icons_plugin_install
+	 * - icons_plugin_uninstall
 	 * 
 	 */
 	class IconsPlugin{
@@ -99,15 +101,16 @@ if (!class_exists("IconsPlugin"))
 			//Filter to remplace text from the content
 			add_filter('the_content',array(&$this, 'icon_plugin_parse'));
 			
-			
 			/**
 			 * tiny_mce
 			 */
-			// if (current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' )){
+			//TODO millorar permisos usuaris
+			//global $user;
+			//if(user_can($user->ID, 'edit_posts') && user_can($user->ID, 'edit_pages')){ 
 	     		add_filter('tiny_mce_version', array(&$this, 'tiny_mce_version') );
 	     		add_filter("mce_external_plugins", array(&$this, "mce_external_plugins"));
 	     		add_filter('mce_buttons_2', array(&$this, 'mce_buttons'));
-			// }
+			 //}
 			
 		}
 	   
@@ -547,13 +550,14 @@ if (!class_exists("IconsPlugin"))
 			
 			$matches_id = explode(',',$matches[1]);
 			
-			$sIconString .= "<div class='documentIcons' >";
+			$sIconString .= "<div id='documentIcons' >";
 			
 			foreach($matches_id as $m_id){
 				foreach($icons as $id){
 					if($m_id == $id['id']){ 
 						$sIconName = $id['icon_name'];
-						$sIconString .= "<img src='" . $this->plugin_url . "/icons/" . $sIconName . "' />";
+						$sIconDesc = $id['icon_desc'];
+						$sIconString .= '<img src="' . $this->plugin_url . '/icons/' . $sIconName . '" alt="'. $sIconDesc .'" />';
 					}
 				}
 			}

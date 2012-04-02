@@ -1,6 +1,18 @@
-.documentIcons {
-	float:left;
+/** Icons Plugin **/
+#documentIcons {
+	width:50%;
+	height:25px;
+	text-align:right;
+	float:right;
 	margin:5px;
+	background-color:white;
+}
+#documentIcons img{
+	padding: 5px;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 5px;
 }
 .documentIcons_icon {
 	text-align:center;

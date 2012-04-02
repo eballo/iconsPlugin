@@ -14,12 +14,12 @@
 						<table class="widefat fixed" cellspacing="0" style="width:500px;">
 							<thead>
 								<tr>
-									<th scope="col"><?php _e('Id', $this->nameDomain); ?></th><th scope="col"><?php _e('Description', $this->nameDomain); ?></th><th scope="col"><?php _e('Icon', $this->nameDomain); ?></th><th scope="col"><?php _e('Action', $this->nameDomain); ?></th>
+									<th scope="col"><?php _e('Id', $this->nameDomain); ?></th><th scope="col"><?php _e('Description', $this->nameDomain); ?></th><th scope="col"><?php _e('Icon', $this->nameDomain); ?></th>
 								</tr>
 							</thead>
 							<tfoot>
 								<tr>
-									<th scope="col"><?php _e('Id', $this->nameDomain); ?></th><th scope="col" ><?php _e('Description', $this->nameDomain); ?></th><th scope="col" ><?php _e('Icon', $this->nameDomain); ?></th><th scope="col"><?php _e('Action', $this->nameDomain); ?></th>
+									<th scope="col"><?php _e('Id', $this->nameDomain); ?></th><th scope="col" ><?php _e('Description', $this->nameDomain); ?></th><th scope="col" ><?php _e('Icon', $this->nameDomain); ?></th>
 								</tr>
 							</tfoot>
 							<tbody style="width:100%;">
@@ -31,7 +31,6 @@
 											<td><?php echo $icon['id'];	?></td>
 											<td><?php echo $icon['icon_desc'];	?></td>
 											<td><img src="<?php echo $this->plugin_url . '/icons/' . $icon['icon_name'];?>" alt="<?php echo $icon['icon_desc'];	?>" /></td>
-											<td><a onclick="showDialogDelete(<?php echo $icon['id'] ?>);" href="#" class="delete"><?php _e('Delete', $this->nameDomain); ?></a></td>
 										</tr>
 									<?php }?>	
 							<?php }?>

@@ -33,4 +33,6 @@ This section describes how to install the plugin and get it working.
  - Select icons and insert into the post/page with a tag [ IconsPlugin id="1,2,3,4," ]
  - change the tag by the image of the icons selected
  
-
+= 2.0 =
+- new icons for the web page of catalunya medieval
+- remove delete link from the icons list
