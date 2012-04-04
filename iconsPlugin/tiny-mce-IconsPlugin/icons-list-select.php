@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<?php 
-	// Add admin.php in order to usefunctions of WP
-	$admin = dirname( __FILE__ );
-	$admin = substr( $admin , 0 , strpos( $admin , "wp-content" ) ) ;
-	require_once( $admin . 'wp-admin/admin.php' ) ;
-?>
+<?php
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+    $admin = dirname( __FILE__ );
+	$admin = substr( $admin , 0 , strpos( $admin , "wp-content" ) ) ;
+	require_once( $admin . 'wp-load.php' ) ;
+
+@header('Content-Type: ' . get_option('html_type') . '; charset=' . get_option('blog_charset'));
+?>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -69,16 +69,16 @@
 	        <tr>
 	            <th><input name="checkAll" type="checkbox" /></th>
 	            <th><?php _e('Id', 'iconsPlugin'); ?></th>
-	            <th><?php _e('Action', 'iconsPlugin'); ?></th>
+	            <th><?php _e('Icon', 'iconsPlugin'); ?></th>
 	            <th><?php _e('Description', 'iconsPlugin'); ?></th>
 	        </tr>
 	    </thead>
 	    <tfoot>
 	        <tr>
 	            <th></th>
-	            <th><?php _e('Id', 'iconsPlugin'); ?></th>
-	            <th><?php _e('Action', 'iconsPlugin'); ?></th>
-	            <th><?php _e('Description', 'iconsPlugin'); ?></th>
+	            <th></th>
+	            <th></th>
+	            <th><a href="#" onclick="javascript:myOnSubmitFunction();" class="select-button"><?php _e('Add','iconsPlugin')?></a></th>
 	        </tr>
 	    </tfoot>
 	    <tbody>
@@ -98,7 +98,7 @@
 				foreach ($icon_result as $icon) {
 					$sOutput .="<tr><td><input name='comment-".$line."' type='checkbox' myID='". $icon['id'] . "' /></td>";
 					$sOutput .="<td>".$icon['id']."</td>";
-					$sOutput .="<td> <img src=". $plugin_url . '/icons/' . $icon['icon_name'] . " alt=" . $icon['icon_desc'] . " /></td>";
+					$sOutput .="<td> <img src='". $plugin_url . '/icons/' . $icon['icon_name'] . "' ></td>";
 					$sOutput .="<td>". $icon['icon_desc'] ."</td></tr>";
 					$line++;
 				}
@@ -109,7 +109,6 @@
 			?>
 		</tbody>
 	</table>
-	<a href="#" onclick="javascript:myOnSubmitFunction();" class="select-button"><?php _e('Add','iconsPlugin')?></a>
 	</div>
 </div>
 </body>

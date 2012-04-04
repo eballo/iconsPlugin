@@ -36,3 +36,13 @@ This section describes how to install the plugin and get it working.
 = 2.0 =
 - new icons for the web page of catalunya medieval
 - remove delete link from the icons list
+
+= 2.0.1 =
+- Millora icones tooltip i descripci— sql
+
+== FUTURE VERSION ==
+- millorar el llista
+- fer que apareguin el nom alt
+- fer funcio via ajax perque funcioni amb qtranslate
+- missatges error & missatges de finalitzaci— correcte
+- ajuda

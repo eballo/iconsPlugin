@@ -7,6 +7,15 @@
 	margin:5px;
 	background-color:white;
 }
+.tooltip {
+    display:none;
+    background:transparent url(../images/black_arrow.png);
+    font-size:12px;
+    height:70px;
+    width:160px;
+    padding:25px;
+    color:#eee;
+}
 #documentIcons img{
 	padding: 5px;
 	-moz-border-radius: 10px;
