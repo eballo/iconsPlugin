@@ -18,7 +18,7 @@
             	ed.windowManager.open({
 	            		file : url + '/icons-list-select.php',
 	            		width : 500 + parseInt(ed.getLang('IconsPlugin.delta_width', 0)),
-	            		height : 590 + parseInt(ed.getLang('IconsPlugin.delta_height', 0)),
+	            		height : 650 + parseInt(ed.getLang('IconsPlugin.delta_height', 0)),
 	            		inline : 1
 	            		}, {
 	            			plugin_url : url
