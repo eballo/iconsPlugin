@@ -19,15 +19,15 @@
 					<span><b><?php _e('NOTE:', $this->nameDomain); ?> </b> <?php _e('Refer help for instructions to use Icons Plugin.', $this->nameDomain); ?></span>
 					<div class="clear" style="min-height:5px;"></div>
 					<div id="dashboard-widgets-wrap">
-						<table class="widefat fixed" cellspacing="0" style="width:500px;">
+						<table class="widefat fixed" cellspacing="0" style="width:90%">
 							<thead>
 								<tr>
-									<th scope="col"><?php _e('Id', $this->nameDomain); ?></th><th scope="col"><?php _e('Icon', $this->nameDomain); ?></th><th scope="col"><?php _e('Description', $this->nameDomain); ?></th>
+									<th scope="col"><?php _e('Id', $this->nameDomain); ?></th><th scope="col"><?php _e('Icon', $this->nameDomain); ?></th><th scope="col"><?php _e('Description', $this->nameDomain); ?></th><th scope="col"><?php _e('Visible', $this->nameDomain); ?></th>
 								</tr>
 							</thead>
 							<tfoot>
 								<tr>
-									<th scope="col"><?php _e('Id', $this->nameDomain); ?></th><th scope="col" ><?php _e('Icon', $this->nameDomain); ?></th><th scope="col" ><?php _e('Description', $this->nameDomain); ?></th>
+									<th scope="col"><?php _e('Id', $this->nameDomain); ?></th><th scope="col" ><?php _e('Icon', $this->nameDomain); ?></th><th scope="col" ><?php _e('Description', $this->nameDomain); ?></th><th scope="col"><?php _e('Visible', $this->nameDomain); ?></th>
 								</tr>
 							</tfoot>
 							<tbody style="width:100%;">
@@ -39,6 +39,7 @@
 											<td><?php echo $icon['id'];	?></td>
 											<td id="icons"><img src="<?php echo $this->plugin_url . '/icons/' . $icon['icon_name'];?>" title="<?php echo $icon['icon_desc'];	?>" /></td>
 											<td><?php echo $icon['icon_desc'];	?></td>
+											<td><?php echo $icon['icon_visible'];	?></td>
 										</tr>
 									<?php }?>	
 							<?php }?>

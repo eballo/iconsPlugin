@@ -92,7 +92,7 @@
 			    $table_name = $wpdb->prefix . $sub_name_type;
 				
 			    $sOutput = '';
-			    $sql = "SELECT * FROM " . $table_name;
+			    $sql = "SELECT * FROM " . $table_name . " WHERE icon_visible='T' ";
 				$icon_result = $wpdb->get_results($sql, ARRAY_A);
 				$line = 0;
 				foreach ($icon_result as $icon) {

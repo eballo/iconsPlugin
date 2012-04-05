@@ -450,35 +450,36 @@ if (!class_exists("IconsPlugin"))
 						 	  `id` bigint(20) NOT NULL auto_increment,
 							  `icon_name` mediumtext,
 							  `icon_desc` varchar(255) NOT NULL,
+							  `icon_visible` varchar(1) NOT NULL,
 							  PRIMARY KEY  (`id`)
 						);";
 				require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 				dbDelta($sql);
 			}
 			
-			$wpdb->insert( $this->table_name, array( 'icon_name' => '4x4-icon_16x16.png', 'icon_desc' => '<strong>4x4 :</strong> Imprescindible anar-hi amb un vehicle tot terreny'));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'Indicador_itinerari-icon_16x16.png', 'icon_desc' => "<strong>Indicador itinerari :</strong> Hi ha un panell indicatiu de l'itinerari"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'acces_dificil-icon_16x16.png', 'icon_desc' => "<strong>Acc&eacute;s dif&iacute;cil :</strong> Durant el recorregut hi ha ocasions on s'ha de grimpar"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'acces_facil-icon_16x16.png', 'icon_desc' => "<strong>Acc&eacute;s f&agrave;cil :</strong> Fins i tot una persona d'avan&ccedil;ada edat pot anar"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'automobil-icon_16x16.png', 'icon_desc' => "<strong>Autom&ograve;bil :</strong> Es pot arribar a peu de l'edificaci&oacute; amb un turisme"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'autopista-icon_16x16.png', 'icon_desc' => "<strong>Autopista :</strong> Es circula per autopista")); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'bona_vista-icon_16x16.png', 'icon_desc' => "<strong>Bones vistes :</strong> Excel.lent ocasi&oacute; per gaudir d'uns prism&agrave;tics")); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'cami_amb_mal_estat-icon_16x16.png', 'icon_desc' => "<strong>Cam&iacute; en mal estat :</strong> Cal conduir amb precauci&oacute;")); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'capella-icon_16x16.png', 'icon_desc' => "<strong>Capella :</strong> Durant el recorregut o al costat d'una edificaci&oacute; hi ha una esgl&eacute;sia")); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'informacio-icons_16x16.png', 'icon_desc' => "<strong>Informaci&oacute; :</strong> Hi ha un punt d'informaci&oacute;")); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'lloc_fotografic-icon_16x16.png', 'icon_desc' => "<strong>Foto :</strong> Lloc fotogr&agrave;fic")); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'paisatge-icon_16x16.png', 'icon_desc' => "<strong>Paissatge :</strong> Paissatges bonics")); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'parking-icon_16x16.png', 'icon_desc' => "<strong>Parking :</strong> Lliure o de pagament, imprescindible per poder deixar el vehicle")); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'picnic-icon_16x16.png', 'icon_desc' => "<strong>Picnic :</strong> Hi ha un lloc disposat per fer picnic")); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'precaucio-icon_16x16.png', 'icon_desc' => "<strong>Precauci&oacute; :</strong> Possibilitat de patir un accident")); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'restaurant-icon_16x16.png', 'icon_desc' => "<strong>Restaurant :</strong> Hi ha lloc per menjar a prop"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'ruta_a_peu-icon_16x16.png', 'icon_desc' => "<strong>Ruta a peu :</strong> Cal caminar una estona per arribar a l'edificaci&oacute;"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'ruta_amb_bicicleta-icon_16x16.png', 'icon_desc' => "<strong>Ruta amb bicicleta :</strong> S'hi pot anar amb bicicleta - ruta espec&iacute;fica"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'ruta_familiar-icon_16x16.png', 'icon_desc' => "<strong>Ruta familiar :</strong> Ruta senzilla, per a tothom"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'ruta_monumental-icon_16x16.png', 'icon_desc' => "<strong>Ruta monumental :</strong> Pres&egrave;ncia de varies edificacions rellevants"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'visita_de_pagament-icon_16x16.png', 'icon_desc' => "<strong>Visita de pagament :</strong> Indret visitable previ pagament i en horaris concrets"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'vista_panoramica-icon_16x16.png', 'icon_desc' => "<strong>Vista panor&agrave;mica :</strong> Mirador - Grans panor&agrave;miques"));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'centre_ciutat-icon_16x16.png', 'icon_desc' => "<strong>Zona urbana :</strong> Edificaci&oacute; situada en zona urbana"));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => '4x4-icon_16x16.png', 'icon_desc' => '<strong>4x4 :</strong> &Eacute;s necessari utiliztar un vehicle 4x4', 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'Indicador_itinerari-icon_16x16.png', 'icon_desc' => "<strong>Indicador itinerari :</strong> Hi ha cartells indicatius", 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'acces_dificil-icon_16x16.png', 'icon_desc' => "<strong>Acc&eacute;s dif&iacute;cil :</strong> Durant el recorregut hi ha ocasions on s'ha de grimpar", 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'acces_facil-icon_16x16.png', 'icon_desc' => "<strong>F&agrave;cil acc&eacute;s  :</strong> Per a gent gran", 'icon_visible'=>'F'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'automobil-icon_16x16.png', 'icon_desc' => "<strong>Autom&ograve;bil :</strong> Ruta practicable amb vehicle de turisme", 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'autopista-icon_16x16.png', 'icon_desc' => "<strong>Autopista :</strong> Es circula per autopista", 'icon_visible'=>'F')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'bona_vista-icon_16x16.png', 'icon_desc' => "<strong>Bona vista :</strong> Excel.lent ocasi&oacute; per gaudir d'uns prism&agrave;tics", 'icon_visible'=>'T')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'cami_amb_mal_estat-icon_16x16.png', 'icon_desc' => "<strong>Cam&iacute; en mal estat :</strong> Cal conduir amb precauci&oacute;", 'icon_visible'=>'T')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'capella-icon_16x16.png', 'icon_desc' => "<strong>Capella :</strong> A la vora o al costat d'una edificaci&oacute; hi ha una esgl&eacute;sia", 'icon_visible'=>'T')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'informacio-icons_16x16.png', 'icon_desc' => "<strong>Informaci&oacute; :</strong> Hi ha un punt d'informaci&oacute; a la vora", 'icon_visible'=>'T')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'lloc_fotografic-icon_16x16.png', 'icon_desc' => "<strong>Foto :</strong> Lloc fotogr&agrave;fic", 'icon_visible'=>'F')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'paisatge-icon_16x16.png', 'icon_desc' => "<strong>Fotografia :</strong> Lloc pintoresc", 'icon_visible'=>'T')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'parking-icon_16x16.png', 'icon_desc' => "<strong>Parking :</strong> Disposa de zona lliure i/o de pagament per poder aparcar", 'icon_visible'=>'T')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'picnic-icon_16x16.png', 'icon_desc' => "<strong>Picnic :</strong> Hi ha lloc disposat per fer picnic", 'icon_visible'=>'T')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'precaucio-icon_16x16.png', 'icon_desc' => "<strong>Precauci&oacute; :</strong> Risc d'accident", 'icon_visible'=>'T')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'restaurant-icon_16x16.png', 'icon_desc' => "<strong>Restaurant :</strong> Hi ha lloc a prop per menjar", 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'ruta_a_peu-icon_16x16.png', 'icon_desc' => "<strong>Ruta a peu :</strong> Cal caminar una estona per arribar a l'edificaci&oacute;", 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'ruta_amb_bicicleta-icon_16x16.png', 'icon_desc' => "<strong>Ruta amb bicicleta :</strong> S'hi pot anar amb bicicleta - ruta espec&iacute;fica", 'icon_visible'=>'F'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'ruta_familiar-icon_16x16.png', 'icon_desc' => "<strong>Ruta familiar :</strong> Ruta senzilla, per a tothom", 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'ruta_monumental-icon_16x16.png', 'icon_desc' => "<strong>Ruta monumental :</strong> Pres&egrave;ncia d'edificacions rellevants a la ruta", 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'visita_de_pagament-icon_16x16.png', 'icon_desc' => "<strong>Visita de pagament :</strong> Indret visitable previ pagament i en horaris concrets", 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'vista_panoramica-icon_16x16.png', 'icon_desc' => "<strong>Vista panor&agrave;mica :</strong> Mirador - Grans panor&agrave;miques", 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'centre_ciutat-icon_16x16.png', 'icon_desc' => "<strong>Zona urbana :</strong> Edificaci&oacute; situada en zona urbana", 'icon_visible'=>'T'));
 			
 //			$icons_exist = IconsPlugin::scandir_icons($this->plugin_path . '/icons/');
 //			$initial_icons = array();
