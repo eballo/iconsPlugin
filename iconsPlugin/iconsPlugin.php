@@ -3,7 +3,7 @@
 	Plugin Name: Icons Plugin
 	Plugin URI: 
     Description: A plugin to display a list of icons into pages/posts. Feature to upload icons provided.
-    Version: 2.0.1
+    Version: 2.0.3
     Author: eballo
     Author URI: 
 	License: GPL
@@ -457,13 +457,13 @@ if (!class_exists("IconsPlugin"))
 				dbDelta($sql);
 			}
 			
-			$wpdb->insert( $this->table_name, array( 'icon_name' => '4x4-icon_16x16.png', 'icon_desc' => '<strong>4x4 :</strong> &Eacute;s necessari utiliztar un vehicle 4x4', 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => '4x4-icon_16x16.png', 'icon_desc' => '<strong>4x4 :</strong> &Eacute;s necessari utilitzar un vehicle 4x4', 'icon_visible'=>'T'));
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'Indicador_itinerari-icon_16x16.png', 'icon_desc' => "<strong>Indicador itinerari :</strong> Hi ha cartells indicatius", 'icon_visible'=>'T'));
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'acces_dificil-icon_16x16.png', 'icon_desc' => "<strong>Acc&eacute;s dif&iacute;cil :</strong> Durant el recorregut hi ha ocasions on s'ha de grimpar", 'icon_visible'=>'T'));
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'acces_facil-icon_16x16.png', 'icon_desc' => "<strong>F&agrave;cil acc&eacute;s  :</strong> Per a gent gran", 'icon_visible'=>'F'));
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'automobil-icon_16x16.png', 'icon_desc' => "<strong>Autom&ograve;bil :</strong> Ruta practicable amb vehicle de turisme", 'icon_visible'=>'T'));
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'autopista-icon_16x16.png', 'icon_desc' => "<strong>Autopista :</strong> Es circula per autopista", 'icon_visible'=>'F')); 
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'bona_vista-icon_16x16.png', 'icon_desc' => "<strong>Bona vista :</strong> Excel.lent ocasi&oacute; per gaudir d'uns prism&agrave;tics", 'icon_visible'=>'T')); 
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'bona_vista-icon_16x16.png', 'icon_desc' => "<strong>Bona vista :</strong> Excel.lent ocasi&oacute; per utilitzar uns prism&agrave;tics", 'icon_visible'=>'T')); 
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'cami_amb_mal_estat-icon_16x16.png', 'icon_desc' => "<strong>Cam&iacute; en mal estat :</strong> Cal conduir amb precauci&oacute;", 'icon_visible'=>'T')); 
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'capella-icon_16x16.png', 'icon_desc' => "<strong>Capella :</strong> A la vora o al costat d'una edificaci&oacute; hi ha una esgl&eacute;sia", 'icon_visible'=>'T')); 
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'informacio-icons_16x16.png', 'icon_desc' => "<strong>Informaci&oacute; :</strong> Hi ha un punt d'informaci&oacute; a la vora", 'icon_visible'=>'T')); 
@@ -478,7 +478,7 @@ if (!class_exists("IconsPlugin"))
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'ruta_familiar-icon_16x16.png', 'icon_desc' => "<strong>Ruta familiar :</strong> Ruta senzilla, per a tothom", 'icon_visible'=>'T'));
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'ruta_monumental-icon_16x16.png', 'icon_desc' => "<strong>Ruta monumental :</strong> Pres&egrave;ncia d'edificacions rellevants a la ruta", 'icon_visible'=>'T'));
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'visita_de_pagament-icon_16x16.png', 'icon_desc' => "<strong>Visita de pagament :</strong> Indret visitable previ pagament i en horaris concrets", 'icon_visible'=>'T'));
-			$wpdb->insert( $this->table_name, array( 'icon_name' => 'vista_panoramica-icon_16x16.png', 'icon_desc' => "<strong>Vista panor&agrave;mica :</strong> Mirador - Grans panor&agrave;miques", 'icon_visible'=>'T'));
+			$wpdb->insert( $this->table_name, array( 'icon_name' => 'vista_panoramica-icon_16x16.png', 'icon_desc' => "<strong>Vista panor&agrave;mica :</strong> Mirador i/o vistes panor&agrave;miques", 'icon_visible'=>'T'));
 			$wpdb->insert( $this->table_name, array( 'icon_name' => 'centre_ciutat-icon_16x16.png', 'icon_desc' => "<strong>Zona urbana :</strong> Edificaci&oacute; situada en zona urbana", 'icon_visible'=>'T'));
 			
 //			$icons_exist = IconsPlugin::scandir_icons($this->plugin_path . '/icons/');
