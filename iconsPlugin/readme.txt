@@ -40,9 +40,14 @@ This section describes how to install the plugin and get it working.
 = 2.0.1 =
 - Millora icones tooltip i descripci— sql
 
+= 3.0 =
+- millora text retorn sense coma final [ IconsPlugin id="1,2,3,4" ]
+
 == FUTURE VERSION ==
 - millorar el llista
 - fer que apareguin el nom alt
 - fer funcio via ajax perque funcioni amb qtranslate
 - missatges error & missatges de finalitzaci— correcte
 - ajuda
+- crear widget
+

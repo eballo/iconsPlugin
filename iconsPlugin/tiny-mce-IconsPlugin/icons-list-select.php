@@ -34,7 +34,7 @@
 			alert(_e('Please, select an icon','iconsPlugin'));
 			return;
 		}
-		
+		ids = ids.substring(0,ids.length-1);
 		var output = '[ IconsPlugin id="';
 		output += ids + '" ]';
 		
