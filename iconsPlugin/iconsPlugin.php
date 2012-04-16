@@ -3,7 +3,7 @@
 	Plugin Name: Icons Plugin
 	Plugin URI: 
     Description: A plugin to display a list of icons into pages/posts. Feature to upload icons provided.
-    Version: 2.0.3
+    Version: 3.0
     Author: eballo
     Author URI: 
 	License: GPL
