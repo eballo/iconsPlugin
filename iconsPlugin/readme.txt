@@ -1,7 +1,7 @@
 === IconsPlugin ===
 Author: eballo
 Contributors: 
-Version: 1.0
+Version: 3.0
 License: GPL
 
 == Description ==
